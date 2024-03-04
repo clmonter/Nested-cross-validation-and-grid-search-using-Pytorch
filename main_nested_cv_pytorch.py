@@ -111,42 +111,34 @@ parser.add_argument('--curves_outer_cv', type=bool, default = False,
                     help='Si queremos que vaya imprimiendo las curvas de entrenamiento para cada outer fold')
 
 ########################################################
-## Parametros anteriormente estaticos
+## Paths
 ########################################################
-######## Rutas para exportar 
-## Cluster
-#parser.add_argument('--path_cm', type=str, 
-#                    default='/export/usuarios_gpm/cmramirez/experimentos_nested_cv/results/confusion_matrices')
-#parser.add_argument('--path_hyperparams_results', type=str, 
-#                    default='/export/usuarios_gpm/cmramirez/experimentos_nested_cv/results/hyperparams_results')
-#parser.add_argument('--path_learning_curves',type=str, 
-#                    default='/export/usuarios_gpm/cmramirez/experimentos_nested_cv/results/learning_curves')
-
+######## Paths to export results
 ## Local
 parser.add_argument('--path_cm', type=str, 
-                    default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/9_1_4INNER_PYTORCH_NESTED_CROSS_VAL/confusion_matrices')
+                   default='your_path_to_export_confussion_matrices',
+                   help='Path to export confussion matrices (.png))
 parser.add_argument('--path_hyperparams_results', type=str, 
-                    default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/9_1_4INNER_PYTORCH_NESTED_CROSS_VAL/hyperparams_results')
+                   default='your_path_to_export_hyperparameters',
+                   help='Path to export hyperparameter results for each fold (.txt)')
 parser.add_argument('--path_learning_curves',type=str, 
-                    default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/9_1_4INNER_PYTORCH_NESTED_CROSS_VAL/learning_curves')
-parser.add_argument('--export_path', type=str, default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/9_1_4INNER_PYTORCH_NESTED_CROSS_VAL/all_process',
-                    help='Ruta a la carpeta en la que se van a guardar los hiperparametros.')
-parser.add_argument('--path_predictons', type=str, default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/9_1_4INNER_PYTORCH_NESTED_CROSS_VAL/test_predictions',
-                    help='Ruta para todas las predicciones de cada fold')
-parser.add_argument('--path_models', type=str, default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/9_1_4INNER_PYTORCH_NESTED_CROSS_VAL/models',
-                    help='Ruta para los mejores modelos de cada fold')
-######## Rutas a los datos
-## Cluster
-#parser.add_argument('--data_path', type=str, 
-#                    default='/data/tmp/cmramirez/experimentos_nested_cv/Datos/Folds')
-#parser.add_argument('--labels_path', type=str, 
-#                    default='/data/tmp/cmramirez/experimentos_nested_cv/Datos/Labels')
-
+                   default='your_path_to_export_learning_curves',
+                   help='Path to export hyperparameter learning curves for each fold (.png)')
+parser.add_argument('--export_path', type=str, 
+                    default='your_path_to_export_all_inner_fold_scores',
+                    help='Path to export a table for all inner fold scores with each set of hyperparameters (.csv)')
+parser.add_argument('--path_predictons', type=str, 
+                    default='your_path_to_export_test_predictions',
+                    help='Path to export test predictions for each outer fold.')
+parser.add_argument('--path_models', type=str,
+                    default='your_path_to_save_models',
+                    help='Path to save the best model for each outer fold.')
+######## Paths to data and labels
 ## Local
 parser.add_argument('--full_data_path', type=str, 
-                    default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/3_EXTRACT_FEATURES/all_features')
+                    default='path_to_your_data')
 parser.add_argument('--labels_path', type=str, 
-                    default='/home/cmramirez/Desktop/Python/PAPER_dic_2023/2_STRATIFIED_K_FOLD')
+                    default='path_to_your_labels')
 
 args = parser.parse_args()
 
