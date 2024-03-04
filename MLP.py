@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 from IPython.display import clear_output
 import seaborn as sns
 
-
 class MLP(nn.Module):
     def __init__(self, 
                  net_type,
