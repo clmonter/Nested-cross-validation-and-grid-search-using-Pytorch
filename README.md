@@ -1,4 +1,4 @@
-# Nested cross-validation using Pytorch
+# Nested cross-validation and Grid Search using Pytorch
 This repository is used to perform nested cross validation on a single hidden layer MLP using Pytorch. 
 
 The already implemented parameters adjustable with grid search are:
