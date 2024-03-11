@@ -29,18 +29,9 @@ def load_variable(full_datos_path, labels_path, id_fold, variable, num_component
         data = dt_labels['new_loc_num'].astype(int)
 
     ## NUMERICAL
-    elif variable == 'mfccs':
-        data = pd.read_csv(full_datos_path+'/dt_mfccs.csv')
-
     elif variable == 'librosa':
-        data = pd.read_csv(full_datos_path+'/dt_librosa.csv')
-
-    elif variable == 'mfccs_librosa':
-
-        dt1 = pd.read_csv(full_datos_path+'/dt_mfccs.csv')
-        dt2 = pd.read_csv(full_datos_path+'/dt_librosa.csv')
-        data = pd.merge(dt1, dt2, on='audio_name_chunk')
-
+        dt = pd.read_csv(full_datos_path+'/dt_librosa.csv')
+   
     elif variable == 'timbral':
         data = pd.read_csv(full_datos_path+'/dt_timbrals.csv')
 
