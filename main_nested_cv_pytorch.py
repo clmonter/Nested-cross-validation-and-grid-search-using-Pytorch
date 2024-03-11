@@ -21,7 +21,8 @@ parser = argparse.ArgumentParser()
 
 ######## Features
 parser.add_argument('--feature', type=str, default='panns_audio_tagging',
-                    choices=['mfccs_librosa','timbral',
+                    choices=['librosa','timbral',
+                             'hog','lbp', ## Spectrogram features
                              'tfidf_yamnet','tfidf_panns','node2vec_yamnet','node2vec_panns',
                              'tfidf_yamnet_03_umbral', 'node2vec_yamnet_03_umbral', # 0.3 estático
                              'tfidf_panns_03_umbral', 'node2vec_panns_03_umbral',
@@ -29,7 +30,6 @@ parser.add_argument('--feature', type=str, default='panns_audio_tagging',
                              'tfidf_panns_02_umbral', 'node2vec_panns_02_umbral',
                              'tfidf_yamnet_redondeo_x10', 'node2vec_yamnet_redondeo_x10', # conteo x 10
                              'tfidf_panns_redondeo_x10', 'node2vec_panns_redondeo_x10',
-                             'hog','lbp', ## Spectrogram features
                              'yamnet_audio_tagging','panns_audio_tagging'], ## Audio Tagging
                     help='Feature group con el que vamos a hacer la nested cross validation.')
 
