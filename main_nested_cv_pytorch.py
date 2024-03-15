@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 23 09:44:10 2024
+
+@author: clmonter
+"""
+
 import argparse
 import torch
 import numpy as np
