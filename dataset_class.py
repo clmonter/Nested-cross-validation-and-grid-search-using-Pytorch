@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 23 09:44:10 2024
+
+@author: clmonter
+"""
+
 import pandas as pd
 import numpy as np
 from torch.utils.data import Dataset
