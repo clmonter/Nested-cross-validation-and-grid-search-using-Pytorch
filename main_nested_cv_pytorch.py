@@ -165,19 +165,19 @@ else:
     torch.manual_seed(SEED)
 
 ########################################################
-## Parametros estaticos
+## Static parameters
 ########################################################
 
 etiquetas_clases = {'Home': 0, 'Caf': 1, 'Resto': 2, 'Transp': 3, 'Bar': 4, 'Work': 5, 'MedC': 6, 'School': 7}
 
 ########################################################
-## Cargar datos
+## Load data
 ########################################################
 
 datos = {}
 labels = {}
 
-## Cargar todos los datos y guardarlos en diccionarios
+## Load full data and store it in dictionaries
 if args.verbose_outer_cv == True:
     print('Preparing data using k fold partition...')
 
