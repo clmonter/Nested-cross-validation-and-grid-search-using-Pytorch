@@ -10,6 +10,7 @@ However, a more robust way to provide meaningful results is the **nested cross-v
 
 ![imagen](https://github.com/user-attachments/assets/4d976299-d070-495b-b69c-f962a5507b1c)
 
+To execute the process, you should just run **main_cv_using_pytorch.py**. 
 
 In this case, we perform nested cross validation on a single hidden layer MLP.
 The already implemented parameters adjustable with grid search are:
@@ -26,3 +27,4 @@ The already implemented parameters adjustable with grid search are:
 
 The code was initially implemented to perform a comparison between different sets of audio features for acoustic scene classification on a given dataset.
 However, the code is adaptable for any different type of problem. It is also adaptable to train different models!
+
