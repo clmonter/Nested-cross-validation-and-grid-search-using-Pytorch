@@ -10,7 +10,7 @@ However, a more robust way to provide meaningful results is the **nested cross-v
 
 ![imagen](https://github.com/user-attachments/assets/4d976299-d070-495b-b69c-f962a5507b1c)
 
-However, the number of times a model has to be trained to complete the process is_
+However, the number of times a model has to be trained to complete the process is:
 
 $N_{outer folds} \cdot N_{inner folds}$ 
 
