@@ -39,16 +39,16 @@ parser.add_argument('--feature', type=str, default='panns_audio_tagging',
                              'tfidf_yamnet_redondeo_x10', 'node2vec_yamnet_redondeo_x10', # conteo x 10
                              'tfidf_panns_redondeo_x10', 'node2vec_panns_redondeo_x10',
                              'yamnet_audio_tagging','panns_audio_tagging'], ## Audio Tagging
-                    help='Feature group con el que vamos a hacer la nested cross validation.')
+                    help='Feature group with which we are going to do the nested cross validation.')
 
 ######## GridSearch
 parser.add_argument('--net_type', type=str, default= 'SimpleNet',
                     choices = ['SimpleNet', 'MultiHeadNet'],
-                    help='Tipo de red que vamos a utilizar')
+                    help='Type of network to be used')
 
 parser.add_argument('--scoring', default='f1-macro',
                     choices=['accuracy','f1-macro','f1-weighted'],
-                    help='Metrica que vamos a utilizar para escoger los mejores parametros')
+                    help='Metrics to be used to choose the best parameters')
 
 parser.add_argument('--p_grid', type=dict,
                     default = {
@@ -64,25 +64,25 @@ parser.add_argument('--p_grid', type=dict,
 parser.add_argument('--pca_n_components', type=int, default=40,
                     help = 'Number of components of the PCA, por Acoustic Unit Descriptors.')
 parser.add_argument('--add_noise', type=bool, default=True,
-                    help='Si queremos añadir ruido Gaussiano a los datos de entrenamiento, media=0 y std=1.')
+                    help='Whether we want to add Gaussian noise to the training data, media=0 y std=1.')
 
 ########  Save results
 parser.add_argument('--save_cm_fold', type=bool, default=False,
-                    help='Si queremos guardar las matrices de confusion para cada fold.')
+                    help='Whether we want to store the confusion matrices for each fold.')
 parser.add_argument('--save_cm', type=bool, default=True,
-                    help='Si queremos guardar las matrices de confusion acumuladas.')
+                    help='Whether we want to save the accumulated confusion matrices.')
 
 parser.add_argument('--save_hyperparams', type=bool, default=True,
-                    help='Si queremos guardar los resultados y los mejores hiperparametros.')
+                    help='Whether we want to store the results and the best hyperparameters.')
 
 parser.add_argument('--save_learning_curves_fold', type=bool, default=True,
-                    help='Si queremos guardar las curvas de aprendizaje para cada fold.')
+                    help='Whether we want to save the learning curves for each fold.')
 
 parser.add_argument('--save_predictions', type=bool, default=True,
-                    help='Si queremos guardar un diccionario de todos los resultados reales y predichos.')
+                    help='Whether we want to save a dictionary of all real and predicted labels.')
 
 parser.add_argument('--save_models', type=bool, default=True,
-                    help='Si queremos guardar los mejores modelos para cada fold.')
+                    help='Whether we want to save best models for each fold.')
 
 ########  Outer and inner folds 
 parser.add_argument('--n_folds', type=int, default = 5,
@@ -102,21 +102,21 @@ parser.add_argument('--seed', type=int, default=42,
 #### Inner CV
 ## Verbose
 parser.add_argument('--verbose_inner_cv', type=bool, default = True,
-                    help='Si queremos que vaya imprimiendo los resultados durante la validación cruzada')
+                    help='Print inner fold results during cross validation')
 ## Print loss curves
 parser.add_argument('--curves_inner_cv', type=bool, default = False,
-                    help='Si queremos que vaya imprimiendo las curvas de entrenamiento cada vez que entrena un modelo')
+                    help='Print the training curves each time a model is trained for the inner loop')
 ## Exportar los resultados con distintos hiperparametros
 parser.add_argument('--export_all_process', type=bool, default = True,
-                    help='Si queremos exportar todos los resultados con distintos hiperparámetros')
+                    help='Export all the results with different hyperparameters')
 
 #### Outer CV
 ## Verbose
 parser.add_argument('--verbose_outer_cv', type=bool, default = True,
-                    help='Si queremos que vaya imprimiendo los resultados para cada outer fold')
+                    help='Print outer fold results during cross validation')
 ## Print loss curves
 parser.add_argument('--curves_outer_cv', type=bool, default = False,
-                    help='Si queremos que vaya imprimiendo las curvas de entrenamiento para cada outer fold')
+                    help='Print the training curves each time a model is trained for the outer loop')
 
 ########################################################
 ## Paths
