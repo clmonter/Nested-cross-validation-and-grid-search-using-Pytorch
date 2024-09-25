@@ -12,7 +12,7 @@ However, a more robust way to provide meaningful results is the **nested cross-v
 
 However, the number of times a model has to be trained to complete the process is_
 
-$N_{outer folds} \cdot N_{inner folds}$. 
+$N_{outer folds} \cdot N_{inner folds}$ 
 
 In our case, is $5 \cdot 4 = 20$ times!!! We are training a vanila MLP, but if you're training such a large model... you could spend weeks waiting for the result. Python libraries such as *sklearn* provide functions to easily perform grid search or nested cross validation. However, for training large models where GPU usage is essential, *pytorch* can be a good solution. Based on this emergence, we provide an easy and open source code open to adaptations for anyone who has encountered this problem. 
 
