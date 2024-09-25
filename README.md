@@ -1,9 +1,13 @@
 # Nested cross-validation and Grid Search using Pytorch
-This repository is used to perform nested cross validation on a single hidden layer MLP using Pytorch.
+This repository is used to perform nested cross validation using Pytorch.
 Let's understand how it works!
 
+![imagen](https://github.com/user-attachments/assets/87d2aca5-0562-4bb1-b598-f2142fd78b95)
+
+The cross-validation technique is increasingly used in the world of artificial intelligence. This technique gives more meaningful results around the performance of a model, as it uses different test sets to evaluate it. Instead of using a single test set, we split our data into **outer loops**, so that we evaluate the model 5 times, being able to give statistical descriptors on the results. 
 
 
+In this case, we perform nested cross validation on a single hidden layer MLP.
 The already implemented parameters adjustable with grid search are:
 - batch size
 - dimensions of the hidden layer
